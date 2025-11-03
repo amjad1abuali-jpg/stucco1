@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stucco Menwear</title>
+  <meta name="description" content="YOUR BRAND — Minimal clothing made for everyday comfort. Explore the latest drop, lookbook, and contact us." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="file:///C:/Users/suha/OneDrive/Desktop/stucco%20website/stuccoweb.html" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0e0e10; --muted:#17171a; --card:#111114; --text:#f2f2f3; --sub:#b6b6bf; --accent:#e5e7eb; --brand:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{position:sticky;top:0;z-index:100;background:rgba(14,14,16,.7);backdrop-filter:blur(8px);border-bottom:1px solid #1f1f23}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{font-weight:700;letter-spacing:.18em}
+    .nav-links{display:flex;gap:24px}
+    .nav a{color:var(--sub)}
+    .nav a:hover{color:#fff}
+    .menu-btn{display:none;border:1px solid #2a2a2f;padding:8px 10px;border-radius:10px;background:#151518;color:#fff}
+    @media (max-width: 800px){
+      .nav-links{display:none}
+      .menu-btn{display:block}
+      .mobile{display:none;flex-direction:column;gap:16px;padding:16px 0;border-top:1px solid #1f1f23}
+      .mobile.show{display:flex}
+    }
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:56px 0}
+    .badge{display:inline-block;padding:6px 10px;border:1px solid #2a2a2f;border-radius:999px;font-size:12px;color:var(--sub)}
+    h1{font-size:48px;line-height:1.1;margin:14px 0}
+    p.lead{color:var(--sub);font-size:18px;max-width:50ch}
+    .cta{display:flex;gap:12px;margin-top:20px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid #2a2a2f;background:#151518;color:#fff;font-weight:600}
+    .btn.primary{background:#ffffff;color:#000}
+    .panel{background:linear-gradient(180deg,#151518, #0d0d0f);border:1px solid #1f1f23;border-radius:18px;overflow:hidden}
+    .panel img{aspect-ratio:4/3; height: 400px;object-fit:cover }
+    /*.panel .caption{padding:12px 14px;color:var(--sub);font-size:13px;border-top:1px solid #1f1f23}*/
+    @media (max-width: 1000px){
+      h1{font-size:40px}
+      .hero{grid-template-columns:1fr;}
+    }
+
+    /* Section */
+    section{padding:56px 0;border-top:1px solid #141417}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+    .section-title h2{font-size:28px;margin:0}
+    .muted{color:var(--sub)}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid #1f1f23;border-radius:16px;overflow:hidden}
+    .card img{aspect-ratio:3/4;object-fit:cover}
+    .card .body{padding:12px}
+    .card h3{font-size:16px;margin:0 0 6px}
+    .price{color:var(--sub);font-size:14px}
+    @media (max-width: 900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width: 600px){.grid{grid-template-columns:1fr}}
+
+    /* Lookbook */
+    .mosaic{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+    .mosaic div{border-radius:16px;overflow:hidden;border:1px solid #1f1f23}
+    .mosaic img{height:100%;object-fit:cover}
+    .mosaic .right{display:grid;grid-template-rows:1fr 1fr;gap:18px}
+    @media (max-width: 900px){.mosaic{grid-template-columns:1fr}}
+
+    /* About */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .about .box{background:var(--card);border:1px solid #1f1f23;border-radius:16px;padding:20px}
+    @media (max-width: 900px){.about{grid-template-columns:1fr}}
+
+    /* Contact / Footer */
+    .contact{display:flex;flex-wrap:wrap;gap:14px}
+    .contact a{border:1px solid #2a2a2f;padding:12px 14px;border-radius:12px;background:#151518}
+    footer{padding:28px 0;color:var(--sub);border-top:1px solid #141417}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">Stucco Menwear</a>
+      <nav class="nav-links">
+        <a href="file:///C:/Users/suha/OneDrive/Desktop/stucco%20website/new.html">Shop</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('.mobile').classList.toggle('show')">Menu</button>
+    </div>
+   <!-- <div class="container mobile">
+      <a href="#shop">Shop</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>    -->
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero" id="home">
+      <div>
+        <h1>Minimal pieces for everyday life.</h1>
+        <p class="lead">Timeless silhouettes, premium fabrics, and responsible production. Designed to move with you — from work to weekend.</p>
+        <div class="cta">
+          <a class="btn primary" href="file:///C:/Users/suha/OneDrive/Desktop/stucco%20website/new.html">Explore collection</a>
+          <a class="btn" href="#lookbook">View lookbook</a>
+        </div>
+      </div>
+      <div class="panel">
+        <img src="stuuco logo after edit.png" alt="Model wearing YOUR BRAND"/>
+      </div>
+    </section>
+
+    <!-- SHOP / GALLERY -->
+    <section id="shop">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Pieces</h2>
+          <p class="muted">Showcase items (no checkout). <a href="file:///C:/Users/suha/OneDrive/Desktop/stucco%20website/new.html" style="color: blue; text-decoration: underline;">Visit the link to View full collection.</a></p>
+        </div>
+        <div class="grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <img src="photos/ph2.jpg" alt="Half Zip Sewatshirt"/>
+            <div class="body">
+              <h3>Half Zip Sewatshirt</h3>
+              <div class="price">JD 15 • 100% cotton</div>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="card">
+            <img src="photos/ph9.jpg" alt="V-Neck Blous"/>
+            <div class="body">
+              <h3>V-Neck Blous </h3>
+              <div class="price">JD 16 • cotton</div>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article class="card">
+            <img src="photos/ph7.jpg" alt="leather Jacket"/>
+            <div class="body">
+              <h3>leather Jacket</h3>
+              <div class="price">JD 25 • leather</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKBOOK -->
+    <section id="lookbook">
+      <div class="container">
+        <div class="section-title">
+          <h2>Lookbook</h2>
+          <a class="muted" href="#">See all →</a>
+        </div>
+        <div class="mosaic">
+          <div>
+            <img src="photos/ph10.jpg" alt="Lookbook main"/>
+          </div>
+          <div class="right">
+            <div><img src="photos/ph1.jpg" alt="Look 2"/></div>
+            <div><img src="photos/ph12.jpg" alt="Look 3"/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title"><h2>About the Brand</h2></div>
+        <div class="about">
+          <div class="box">
+            <h3>Our Story</h3>
+            <p class="muted">STUCCO Menswear started in 2007 with one clear goal — to make clothes that are simple, stylish, and comfortable for every man.
+We design for ages 18 to 60, offering casual, sporty, and sport-chic styles that fit any day and any place.
+
+Our focus is on clean designs and easy-to-wear outfits that look good on everyone.
+At STUCCO, we believe fashion should be comfortable, modern, and made for real life.</p>
+          </div>
+          <div class="box">
+            <h3>Materials & Care</h3>
+            <p class="muted">Our clothes are made from premium cotton, breathable fabrics, and recycled materials that are kind to your skin and the planet.
+For longer life, machine wash gently, dry naturally, and iron on low heat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title"><h2>Contact</h2></div>
+        <div class="contact">
+          <a href="https://www.facebook.com/share/17ZYsMQLs2/?mibextid=LQQJ4d">Facebook</a>
+          <a href="https://wa.me/962787404477" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/stucco_outlett?igsh=MXVqbHp4M3p2cGs2eQ==" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> stucco_outlett — All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
